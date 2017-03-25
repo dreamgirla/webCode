@@ -1,0 +1,53 @@
+/*所谓脱离文档流的意思，是本身这个元素在文档就是占位的，如果脱离了，就不占位了，好像浮在空着了一样，有了层次感*/
+body{
+	margin: 100px;
+	height: 800px;
+	border: 1px solid red;
+	/*这body父元素设置一个不需要的top,left定位的相对定位，这个叫做设置参考点*/
+	position: relative;
+}
+/*header{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	position: absolute;
+	top:0;
+	left:0;
+}
+aside{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	position: absolute;
+	top:20px;
+	left:20px;
+	z-index: 1;
+}
+*/
+/*header{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	position: fixed;
+	top:0;
+	left:0;
+}*/
+/*position: fixed;以窗口参考定位，脱离文档流，会随着滚动条滚动而滚动*/
+/*header{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	position: relative;
+	top:10px;
+	left:10px;
+}*/
+/*position: relative;以自己为基准点不脱离文档流，占位偏移*/
+header{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	position: absolute;
+	top:0;
+	left:0;
+}
+/*以某点为参考点*/

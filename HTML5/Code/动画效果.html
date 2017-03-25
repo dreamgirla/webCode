@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动画效果</title>
+	<style type="text/css">
+		body{margin: 100px;}
+		div{width:200px;height: 200px;background-color: white;border: 1px solid green;animation-name: myname;animation-duration:1s;}
+		/*animate;名字 秒数 播放方式 次数 播放方向 延迟时间 */
+
+		/*animation-duration播放所需时间，animation-timing-function播放方式,animation-delay延迟时间,animation-iteration-count循环次数,animation-direction播放方向的交替*/
+
+		/*创建动画的第一步，声明一个动画关键字*/
+		@keyframes myname{
+			0%,100%{
+				background: white;
+				margin-left: 0px;
+			}
+			50%{
+				background: red;
+				margin-left: 100px;
+			}
+			/*100%{
+				background-color: white;
+				margin-left: 0px;
+			}*/
+			/*form{
+				background-color: white;
+				margin-left: 0px;
+			}
+			to {
+				background: red;
+				margin-left: 100px;
+			}*/
+		}
+	</style>
+</head>
+<body>
+<div>我是HTML5</div>
+</body>
+</html>

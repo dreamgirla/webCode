@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>css3边框</title>
+ 	<style type="text/css">
+	#div1{
+		width: 400px;
+		height: 400px;
+		background: red;
+		border-image-source: url(border.png);
+		border-image-width: 27px;
+		border-image-slice: 27;
+		/*border-image-repeat: round;*/
+		/*round指定用平铺方式来填充边框背景图。 */
+
+		/*border-image-repeat: space;*/
+		/*平铺填充，动态调整图片的间距直至铺满*/
+
+		border-image-repeat: stretch;
+		/*拉伸方式填充，当然，通过上右下设置四个边均可*/
+		/*border-image:地址 slice（切割）/ width outset边框背景向外扩张 repeat（图片排列方式） */
+	}
+ 	</style>
+ </head>
+ <body>
+ <div id="div1">1</div>
+ </body>
+ </html>

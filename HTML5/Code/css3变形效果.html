@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3变形效果</title>
+	<style type="text/css">
+	body{margin:100px;}
+	#div1{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		box-shadow: 2px 2px 2px yellow;
+		/*transform: translate(200px,200px);*/
+		/*平移效果*/
+
+		/*transform: scale(1.5);*/
+		/*水平，垂直缩放*/
+		
+		/*transform: rotate(-45deg);*/
+		/*旋转元素：0~360度之间，负值均可*/
+		
+		/*transform: skew(45deg,20deg);*/
+		/*x,y轴倾斜元素*/
+		
+		/*transform: rotate(45deg) scale(0.8);*/
+		
+		/*transform-origin: center center;*/
+
+		/*transform: rotate(45deg);
+		transform-origin:left top;*/
+		/*相当于transform-origin: 0 0; 以左上角为基准点变形*/
+	}
+
+	#div2{
+		transform-style: preserve-3d;
+		/*一般设置到当前元素的父元素，需要配合后面的功能属性和变形配置，才能看到效果，需要加前缀，preserve-3d表示子元素在3D空间中呈现*/
+		perspective:2000px;
+		/*该属性会设置查者的位置，并将可视区内容映射到一个视锥上，继而投放到一个2D平面上，一般设置在元素的父级上*/
+		perspective-origin:top right;
+		/*以右上角为基准点变形*/
+	}
+	img{
+		width: 400px;
+		height: 300px;
+		/*transform: translate3d(100px,100px,200px);*/
+		/*transform: translateZ(200px);*/
+
+		/*transform: scale3d(1,1,0.5) rotate(45deg);*/
+		/*3D缩放，单独设置无效，需要配合角度*/
+		/*transform: scaleZ(0.5)rotate(45deg);*/
+		/*x,y默认为1*/
+		
+		transform: rotate3d(0,1,0,45deg);
+		/*只有0,1数值，表示是否要改变x,y,z轴的角度*/
+
+		/*transform:perspective(500px) rotate(45deg);内部设置大小不一样*/
+	
+	}
+	</style>
+</head>
+<body>
+<div id="div1">我是HTML5</div>
+111
+<br>
+<br>
+<div id="div2">
+	<img src="../images/1.jpg">
+</div>
+</body>
+</html>

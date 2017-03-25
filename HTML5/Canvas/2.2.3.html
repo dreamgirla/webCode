@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>变换</title>
+</head>
+<body>
+<canvas height="200" width="200" id="diagonal" style="border:1px solid;"></canvas>
+
+<script type="text/javascript">
+function drawDiagnoal(){
+		//取得canvas元素及其绘图上下文
+		var canvas = document.getElementById('diagonal');
+		var context = canvas.getContext('2d');
+
+		//保存当期那绘图状态
+		context.save();
+
+		//向右下方移动绘图上下文
+		context.translate(70,140);
+
+		//以原点为起点，绘制与前面相同的线段
+		context.beginPath();
+		context.moveTo(0,0);
+		context.lineTo(70,-70);
+		context.stroke();
+
+		//恢复原有的绘图状态
+		context.restore();
+	}
+	window.addEventListener("load",drawDiagnoal,true);
+</script>
+</body>
+</html>

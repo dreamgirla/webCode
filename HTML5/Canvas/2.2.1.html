@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>检查浏览器支持情况</title>
+</head>
+<body>
+
+<script type="text/javascript">
+try{
+	document.createElement("canvas").getContext("2d");
+	document.getElementById("support").innerHTML = 
+	"HTML5 canvas is supported in your browser.";
+}catch(e){
+	document.getElementById("support").innerHTML = "HTML5 canvas is not supported in your browser."
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css3弹性伸缩布局</title>
+	<style type="text/css">
+	p{
+		width: 150px;
+		border: 1px solid #ccc;
+		background: #ccc;
+		margin:5px;
+		padding: 5px;
+	}
+	div{
+		width: 100%;
+		display: flex;
+		/*flex-direction: column;*/
+		/*flex-direction: row-reverse;*/
+		/*flex-wrap: wrap;*/
+		/*自动换行*/
+		flex-flow:row wrap;
+		/*justify-content: center;*/
+		/*justify-content: flex-end;*/
+		/*justify-content: space-between;*/
+		
+
+	}
+	p:nth-child(1){
+		flex: 1;
+		order: 3
+		}
+	p:nth-child(2){
+		flex: 3;
+		order: 2;
+		/*align-self:center; */
+		/*清理多余空间*/
+	}
+	p:nth-child(3){
+		flex: 1;
+		order: 1
+	}
+	
+
+	</style>
+</head>
+<body>
+<div>
+	<p>从去年年底开始Supercell的绯闻就四处传播，不少中国公司积极介入，但是最终还是花落腾讯。今日，腾讯发布公告称，经与芬兰手游开发商Supercell协商后，腾讯组建的财团将收购Supercell 84.3%的股权，该交易分三期支付，总金额预计为86亿美元。</p>
+	<p>腾讯的86亿美元意味着什么？上海迪斯尼造价55亿美元，360最终私有化协议可能是近90亿美元，里根号航母造价45亿美元，朝鲜军费曾经是年均40亿美元。根据这次收购，Supercell作为一个成立6年、仅发布了四款游戏的手游公司，已经估值102亿美元。而端游大厂动视暴雪市值只有289亿美元。</p>
+	<p>三、King Digital Entertainment并没有能够难以复制前作的成功，存在产品单一，过渡依赖《糖果传奇》的问题。而此时Supercell发布的四款游戏几乎都大获成功，尤其是《部落冲突》之后，2016年的新作《皇室战争》再次在全球各大畅销榜霸榜，并且月均收入都在1亿美元左右，证明了自己能够持续制作全球超S级产品的能力。</p>
+</div>
+</body>
+</html>

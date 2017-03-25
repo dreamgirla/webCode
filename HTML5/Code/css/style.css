@@ -1,0 +1,109 @@
+body,h1,ul,h2,p,figure,h3{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+.none{
+	display: none;
+}
+#header{
+	width: 100%;
+	min-width: 1263px;
+	height: 70px;
+	background: #333;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+	position: relative;
+	z-index: 999;
+}
+#header .center{
+	width: 1263px;
+	height: 70px;
+	margin: 0 auto;
+}
+#header .logo{
+	width: 240px;
+	height: 70px;
+	background: #ccc;
+	text-indent: -9999px;
+	float: left;
+	background: url(../images/11.jpg);
+	/*首行缩进*/
+}
+#header .link{
+	float: right;
+	width: 650px;
+	height: 70px;
+	line-height: 70px;
+	/*垂直居中*/
+}
+#header .link > li{
+	float: left;
+	width: 120px;
+	text-align: center;
+	/*水平居中*/
+}
+#header .link a{
+	color: #eee;
+	display: block;
+	/*延伸区块，不是内联，a的范围增大*/
+
+}
+#header .link  a:hover,
+#header .active a{
+	background: #000;
+}
+
+
+/*******主题内旅游容结束********/
+
+#footer{
+	height:360px;
+	clear: both;
+	background-color: #222;
+	position: relative;
+	top: 20px;
+}
+#footer .top{
+	width: 1263px;
+	height: 281px;
+	margin: 0 auto;
+	background: #222;
+	text-align: center;
+}
+#footer .block{
+	width: 410px;
+	height: 280px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	/*垂直居顶*/
+}
+
+#footer .bottom{
+	height: 80px;
+	background: #000;
+	color:#777;
+	line-height:80px; 
+	text-align: center;
+	border-top: 1px solid #444;
+}
+#footer h2{
+	font-weight: normal;
+	padding:20px 0 0 20px;
+	font-size: 24px;
+}
+#footer hr{
+	width: 90%;
+	border:1px dashed #333;
+}
+#footer ul{
+	color:#666;
+	font-size: 18px;
+	text-indent: 20px;
+	line-height: 2;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>音频视频</title>
+</head>
+<body>
+<!-- <video src="01.mp4" width="600" height="480" controls autoplay loop muted></video> -->
+<!--  controls设置后显示视频控件,autoplay立即播放视频,loop无限循环，muted默认静音 -->
+
+<!-- <video src="01.mp4" width="600" height="480" controls poster="../images/1.jpg"></video> -->
+<!-- poster指定一张图片作为封皮 -->
+
+<video width="640" height="480" controls poster="../images/1.jpg">
+	<source src="01.mp4">
+	<object>实现flash插件的播放，如果屏蔽IE9以下则不需要</object>
+</video>
+<br>
+
+<audio src="if you.mp3" controls autoplay loop></audio>
+</body>
+</html>

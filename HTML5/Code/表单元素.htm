@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>表单元素</title>
+</head>
+<body>
+<form method="post" action="http://www.haosou.com" target="_blank" autocomplete id="register" >
+	<!-- autocomplete设置浏览器记住用户输入的数据 -->
+<!-- <form method="post" action="http://www.haosou.com">没有错 -->
+<!-- 
+<form method="post" action="http://www.baidu.com">有错 -->
+<!-- <form method="get" action="www.baidu.com"> 没有错 -->
+	<label for="user">用户名：</label>
+	<!-- label 中的for 和input 中id结合使用，挂钩，有数据选中，没有数据，聚焦 -->
+	<input id="user" name="user" value="bbb" autocomplete="off" />
+	<!-- <input name="user" autofocus disabled autocomplete value="123" /><br> -->
+	<!-- autofocus光标默认聚焦,disabled不可写,autocomplete对某一个input不提示,name用于提交数据-->
+	<fieldset>
+	<!-- fieldset分组 -->
+	<legend>注册分组</legend>
+		<label>
+			电子邮件:<input type="email" form="register" />
+		</label>
+
+		<button type="submit" formaction="http://www.sougou.com">提交</button>
+		<!-- formaction="http://www.sougou.com"覆盖上面提交的地方 -->
+		<button type="reset">重置</button>
+		<button type="button">按钮</button>
+	</fieldset>
+
+</form>
+	<!-- 电子邮件:<input type="email" form="register" /> -->
+	<!-- form="register" 让表单外的元素和制定的表单挂钩，可以在表单外提交-->
+</body>
+</html>

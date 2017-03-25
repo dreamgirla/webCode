@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input</title>
+</head>
+<body>
+<form action="http:www.baidu.com">
+<!-- 	<input type="text" maxlength="10" size="30" value="qwer" readonly disabled /> -->
+	<!-- readonly只读，可以提交 disabled禁用状态-->
+	<input type="text" list="abc" required /><br><br>
+	<!-- required用户必须输入一个值，否则无法通过输入验证 -->
+
+	<input type="password" placeholder="请输入密码" /><br><br>
+	<!-- placeholder提示文字 -->
+
+	<input type="search" /><br><br>
+	<!-- 火狐不支持，会显示一个叉来取消内容，不怎么用 -->
+
+	<input type="number" min="10" max="100" step="2" /><br><br>
+	<!-- 谷歌只能输入数字 step步长，一次跨多少-->
+
+	<input type="date" /><br><br>
+	<input type="month" /><br><br>
+	<input type="time" /><br><br>
+	<input type="week" /><br><br>
+	<input type="datetime" /><br><br>
+	<!-- 火狐,IE不支持，要体现时间，可以用jquery-->
+	
+	<input type="color" />
+	<br><br>
+	<!-- 选色按钮，IE不支持 -->
+	
+	音乐：<input type="checkbox" name="music" value="1" />
+	体育：<input type="checkbox" name="sport" value="2" />
+	<br><br>
+
+	<input type="radio" name="sex" value="1" checked />男
+	<input type="radio" name="sex" value="2" />女
+	<!-- 如果不给vlaue值，则默认on -->
+	<br><br>
+	
+	<input type="submit" /><br><br>
+	<input type="reset" /><br><br>
+	<input type="button" /><br><br>
+
+	<input type="image" src="../images/1.jpg" width="400" height="300" /><br><br>
+
+	<input type="email" /><br><br>
+
+	<input type="tel" /><br><br>
+	<!-- 不怎么支持电话号 -->
+	<input type="url" /><br><br>
+	<!-- 也是不同浏览器支持程度不一样 -->
+	
+	<input type="hidden" value="123" name="id" />
+	<!-- 数据隐藏，提交时id会被显示 -->
+
+	<input type="file" accept="../images/1.jpg" /><br><br>
+	<!-- 生成一个文件上传控件，用于文件的上传,accept只能是图片形式提交-->
+	<button>提交</button>
+</form>
+
+<datalist id="abc">
+	<option value="1">苹果</option>
+	<option value="2">梨</option>
+	<option value="3" label="香蕉">
+	<option value="菠萝">
+</datalist>
+
+</body>
+</html>

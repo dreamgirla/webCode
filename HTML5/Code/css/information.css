@@ -1,0 +1,164 @@
+/*******景点推荐开始*********/
+#headline{
+	width: 100%;
+	min-width: 1263px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*background: linear-gradient(to bottom right,rgba(0,0,0,1),rgba(255,255,255,0.0));*/
+	background-image: url(../images/7.jpg);
+}
+#headline .center{
+	width: 1263px;
+	height: 300px;
+	margin: 0 auto;
+}
+#headline hgroup{
+	padding:100px 0 0 50px;
+}
+#headline h2{
+	color:#eee;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#headline h3{
+	color:#eee;
+	font-size: 15px;
+	letter-spacing:1px;
+}
+#container{
+	width: 1263px;
+	margin: 30px auto;
+}
+#container .sidebar{
+	width: 340px;
+	height: 1200px;
+	float: right;
+	text-align: center;
+}
+
+#container .sidebox{
+	border:1px solid #eee;
+	margin:0 0 10px 0;
+}
+#container .sidebox h2{
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 35px;
+	background: #fafafa;
+	color: #666;
+	text-align: left;
+	text-indent: 8px;
+}
+#container .tag{
+	padding:10px 0;
+}
+#container .tag li{
+	background: #eee;
+	height: 35px;
+	width: 100px;
+	display: inline-block;
+	line-height: 35px;
+	margin: 2px 0;
+}
+#container .tag a{
+	display: block;
+	color: #999
+}
+#container .tag a:hover{
+	background: #458600;
+	color: #fff;
+}
+/*******景点推荐结束*********/
+
+/*******热门旅游开始*********/
+img{
+	width: 100px;
+	height: 100px;
+}
+#container figure{
+	padding:10px 0;
+}
+#container figure{
+	display: inline-block;
+	padding:4px;
+	color: #666;
+}
+/*******热门旅游结束*********/
+
+/*******旅游百宝箱开始*********/
+
+#container .box{
+	padding:10px 0;
+}
+#container .box a{
+	background: #eee;
+	height: 40px;
+	width: 150px;
+	display: inline-block;
+	line-height: 35px;
+	margin: 2px 0;
+	color: #999;
+}
+#container .box a:hover{
+	background: #458600;
+	color: #fff;
+}
+
+/*******旅游百宝箱结束*********/
+
+
+#container .list{
+	width: 900px;
+	height: 1200px;
+	float: left;
+}
+#container .infor{
+	height: 45px;
+	line-height: 45px;
+	background: #eee;
+}
+#container .left{
+	display: inline-block;
+	float: left;
+}
+#container .left li{
+	display: inline-block;
+	background: #ccc;
+	width: 150px;
+	height: 45px;
+	line-height: 43px;
+	text-align: center;
+}
+#container .left li a{
+	color: #666;
+}
+#container .left li:first-child{
+	background: #fff;
+	border-top: 2px solid #458b00;
+	position: relative;
+	left:1px;
+}
+#container .right{
+	display: inline-block;
+	padding:0 20px 0 0;
+	float: right;
+}
+#container .right li{
+	display: inline-block;
+	width: 60px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+}
+#container .right a{
+	padding:3px 8px;
+	color: #666;
+}
+#container .right a.selected,#container .right li a:hover{
+	background: #458b00;
+	color: #fff;
+}
