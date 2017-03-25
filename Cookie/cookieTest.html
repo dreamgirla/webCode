@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CookieTest</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function setCookie(key,value,expires){
+		var now = new Date();
+		// alert(now);
+		var expireTime = now.setTime(now.getTime() + expires*60*1000);
+		// alert(now);
+		document.cookie = escape(key) + "=" + escape(value)+ "; expires=" + now.toUTCString();
+	}
+
+	var getCookie = function(key){
+		var str = document.cookie;
+		var cookies = str.split(';');
+		for(var i = 0;i < cookies.length;i++){
+			var cookieItem = cookies[i].trim().split('=');
+			if (cookieItem[0] == escape(key)) {
+				return unescape(cookieItem[1]);
+			};
+		}	
+	}
+
+	function removeCookie(key){
+		setCookie(2014, "",-1);
+	}
+
+	setCookie("201=4","yu",1);
+	alert(getCookie("201=4"));
+	removeCookie("201=4");
+	alert(getCookie("201=4"));
+	// var estr = escape("中文 = ; > <");
+	// alert(estr);
+	// alert(unescape(estr));
+	</script>
+</body>
+</html>
