@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>响应式</title>
+	<meta name="viewport" content="width:device-width,initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="blank">
+	<meta name="format-detection" content="telephone=no">
+	<style type="text/css">
+		body{margin:0; }
+		.container{
+			width:80%;
+			margin: auto;
+		}
+		.header{
+			background-color: #333;
+		}
+		li a{
+			color: white;
+		}
+		@media screen and (max-width: 320px;){
+			.logo{
+				height: 40px;
+			}
+			.header{
+				height: 40px;
+			}
+			li{
+				line-height: 50px;
+				padding:0 15px 0 15px;
+				display: block;
+				background-color: #333;
+				text-align: center;
+				border-top: 1px solid white;
+			}
+			.logo{
+				display: block;
+			}
+		}
+		@media screen and (min-width: 320px) and (max-width: 765px;){
+			.logo{
+				height: 50px;
+			}
+			.header{
+				height: 50px;
+			}
+			li{
+				line-height: 50px;
+				padding:0 15px 0 15px;
+				display: block;
+				background-color: #333;
+				text-align: center;
+				border-top: 1px solid white;
+			}
+			.logo{
+				display: block;
+			}
+		}
+		@media screen and (min-width: 765px){
+			.logo{
+				height: 60px;
+			}
+			.header{
+				height: 60px;
+			}
+			li{
+				line-height: 60px;
+				padding:0 15px 0 15px;
+				display: block;
+				float: left;
+			}
+			.logo{
+				display: block;
+				float: left;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<li><a href="">热门帖子</a></li>
+		<li><a href="">热门帖子</a></li>
+ 		<li><a href="">热门帖子</a></li>
+		<li><a href="">热门帖子</a></li>
+	</div>
+
+</div>
+
+</body>
+</html>

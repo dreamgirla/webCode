@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>按钮</title>
+	<link rel="stylesheet" type="text/css" href="css/1.css">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="font-family:'楷体';">
+<button class="btn btn_default" style="width:89px;height:32px;">button</button>
+<button class="btn btn_danger" style="width:89px;height:32px;">button</button>
+<button class="btn btn_warning" style="width:89px;height:32px;">button</button>
+<button class="btn btn_success" style="width:89px;height:32px;">button</button>
+<button class="btn btn_ban" disabled style="width:89px;height:32px;">button</button>
+
+<form style="margin-top:50px;">
+	<font style="font-size:19px;">聚焦&nbsp</font><input type="text" value="该输入框获取焦点" autofocus><br>
+	<p></p>
+	<font style="font-size:19px;">禁用&nbsp</font><input type="text" readonly="readonly" value="该输入框禁止输入" style="color:#ccc;"><br>
+	<p></p>
+	<font style="font-size:19px;">禁用输入&nbsp</font><input type="text" disabled="disabled" value="禁止输入" style="color:#ccc;" /><br>
+	<p></p>
+	<font style="font-size:19px;">禁用选择菜单&nbsp</font><select class="select" disabled><option>禁止选择</option></select>	
+	<p>
+		<font color="#a8bc7b">输入成功</font>&nbsp<input type="text" class="success" /><br>
+		<p></p>
+		<font color="#f0ad4e">输入警告</font>&nbsp<input type="text" class="warning" /><br>
+		<p></p>
+		<font color="#d2322d">输入警告</font>&nbsp<input type="text" class="error" />
+	</p>
+	</form>
+
+<div>
+	<div class="alert alert_success">
+		<a href="" style="text-decoration:none;" class="close">x</a>
+
+		<h4>
+		<i class="fa fa-heart"></i> Succseeful!
+		</h4>
+		 <font style="color:#468847;">and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</font>
+	</div>
+	<p></p>
+	<div class="alert alert_warning">
+		<a href="" style="text-decoration:none;" class="close">x</a>
+		<h4>
+		<i class="fa fa-exclamation-circle"></i>
+		Warning!
+		</h4>
+		 <font style="color:#c09853;">and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</font>
+	</div>
+	<p></p>
+<div class="alert alert_error">
+		<a href="" style="text-decoration:none;" class="close">x</a>
+		<h4>
+		<i class="fa fa-times"></i>
+		Oh snap! You got an error!
+		</h4>
+		 <font style="color:#b94a48">
+		 <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+		 </p></font>
+		 <p>
+		 <a href="" class="b_danger">Undo</a>
+		 <a href="" class="b_default">OK</a>
+		 </p>
+	</div>
+</div>
+
+<p></p>
+
+<div class="box">
+	<div class="box_head">
+		<h4>
+			<i class="fa fa-hand-o-up"></i>
+				<font style="color:#ffffff">Hover Table</font>
+		</h4>
+		<div class="tools">
+			<a href="" style="color:#fff;"><i class="fa fa-cog" ></i></a>
+			<a href="" style="color:#fff;"><i class="fa fa-refresh"></i></a>
+			<a href="" style="color:#fff;"><i class="fa fa-chevron-up"></i></a>
+			<a href="" style="color:#fff;"><i class="fa fa-times"></i></a>
+		</div>
+	</div>
+	<div class="table_body">
+		<table class="table_hover" style="border-collapse: collapse;">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>UserName</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</thead>
+		</table>
+			
+	</div>
+</div>
+
+
+</body>
+</html>
