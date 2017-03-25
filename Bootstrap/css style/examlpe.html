@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<style type="text/css">
+	.container-fluid{border: 1px solid #000;}
+	.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{background-color: #ddd;border: 1px solid #000;}
+	.col-xs-4,.col-xs-6,.col-xs-8,.col-xs-9,.col-xs-12{background-color: #ccc; border: 1px solid red;}
+	.col-sm-9{border: 1px solid blue;background-color: #eee;}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+<!-- 从堆叠到水平排列 -->
+	 <div class="row">
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	  <div class="col-md-1">.col-md-1</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-8">.col-md-8</div>
+	  <div class="col-md-4">.col-md-4</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-4">.col-md-4</div>
+	</div>
+	<div class="row">555
+	  <div class="col-md-6">.col-md-6</div>
+	  <div class="col-md-6">.col-md-6</div>
+	</div>
+
+
+<br/>
+<!-- 移动设备和桌面屏幕 -->
+	<div class="row">
+	  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+	  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+	</div>
+
+	<div class="row">
+	  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+	  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+	  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+	</div>
+
+	<div class="row">
+	  <div class="col-xs-6">.col-xs-6</div>
+	  <div class="col-xs-6">.col-xs-6</div>
+	</div>
+
+<br/>
+<!-- 多余的列（column）将另起一行排列 -->
+	<div class="row">
+	  <div class="col-xs-9">.col-xs-9</div>
+	  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+	  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+	</div>
+
+
+<br/>
+<!-- 列在分界点清除响应， 您可能需要 重置偏移, 后推或前拉某个列。 -->
+	<div class="row">
+	  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+	  <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+	</div>
+
+	<div class="row">
+	  <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+	  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+	</div>
+
+<br/>
+<!-- 列偏移 -->
+	<div class="row">
+	  <div class="col-md-4">.col-md-4</div>
+	  <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+	  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+	</div>
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+	</div>
+
+<br/>
+	<div class="row">
+	  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+	  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+	  <!-- Add the extra clearfix for only the required viewport -->
+	  <div class="clearfix visible-xs-block"></div>
+
+	  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+	  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+	</div>
+
+
+<br/>
+<!-- 嵌套列 -->
+	<div class="row">
+	  <div class="col-sm-9">
+	    Level 1: .col-sm-9
+	    <div class="row">
+	      <div class="col-xs-8 col-sm-6">
+	        Level 2: .col-xs-8 .col-sm-6
+	      </div>
+	      <div class="col-xs-4 col-sm-6">
+	        Level 2: .col-xs-4 .col-sm-6
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+<br/>
+<!-- 列排序 -->
+	<div class="row">
+	  <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+	  <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+	</div>
+
+	<br/>
+	<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+
+	<!-- .lead 类可以让段落突出显示 -->
+	<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+	<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+	<!-- Marked text -->
+	You can use the mark tag to <mark>highlight</mark> text.
+
+	<br></br>
+	<!-- 被删除的文本使用 <del> 标签 -->
+	<del>This line of text is meant to be treated as deleted text.</del>
+	<!-- 没用的文本使用 <s> 标签 -->
+	<s>This line of text is meant to be treated as no longer accurate.</s>
+
+	<br></br>
+	<!-- 额外插入的文本使用 <ins> 标签 -->
+	<ins>This line of text is meant to be treated as an addition to the document.</ins>
+
+	<br></br>
+	<!-- 为文本添加下划线，使用 <u> 标签 -->
+	<u>This line of text will render as underlined</u>
+
+	<br></br>
+	<!-- .small 类以代替任何 <small> 元素 -->
+	<small>This line of text is meant to be treated as fine print.</small>
+
+	<br></br>
+	<strong>rendered as bold text</strong>
+
+	<br></br>
+	<!-- 用斜体强调一段文本 -->
+	3
+
+	<br></br>
+<!-- 简单方便的将文字重新对齐 nowrap属性用于禁止内容自动换行  text-justify齐行改变单词间的间隔-->
+	<p class="text-left">Left aligned text.</p>
+	<p class="text-center">Center aligned text.</p>
+	<p class="text-right">Right aligned text.</p>
+	<p class="text-justify">Justified text.</p>
+	<p class="text-nowrap">No wrap text.No wrap text.No wrap text.No wrap text.No wrap text.No wrap text.No wrap text.</p>
+
+	<br></br>
+	<!-- 改变文本的大小写 -->
+	<p class="text-lowercase">Lowercased text.</p>
+	<p class="text-uppercase">Uppercased text.</p>
+	<p class="text-capitalize">Capitalized text.</p>
+
+
+	<br></br>
+<!-- 缩略语 -->
+	<abbr title="attribute">attr</abbr>
+	<!-- 首字母缩略语 -->
+	<abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+
+	<br/>
+	<br></br>
+<!-- 默认样式的引用 -->
+	<blockquote>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+	</blockquote>
+
+	<blockquote class="blockquote-reverse">
+  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+	</blockquote>
+
+	<br/>
+<!-- 无样式列表 -->
+	<ul class="list-unstyled">
+	  <li>Phasellus iaculis neque</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	</ul>
+	
+<br/>
+<!-- 将所有元素放置于同一行 -->
+	<ul class="list-inline">
+	  <li>Phasellus iaculis neque</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	  <li>Purus sodales ultricies</li>
+	</ul>
+
+<br/>
+<!-- 带有描述的短语列表 -->
+	<dl>
+	  <dt>Description lists</dt>
+	  <dd>A description list is perfect for defining terms.</dd>
+	</dl>
+
+<br/>
+<!-- 水平排列的描述 -->
+	<dl class="dl-horizontal">
+	  <dt>Description lists</dt>
+	  <dd>A description list is perfect for defining terms.</dd>
+	</dl>
+
+<br/>
+<!-- 通过 <code> 标签包裹内联样式的代码片段 -->
+	For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+
+<br></br>
+<!-- 通过 <kbd> 标签标记用户通过键盘输入的内容。 -->
+	To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+	To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+
+<br></br>
+<!-- 代码块 -->
+<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+
+<br></br>
+<!-- 变量 -->
+<var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+
+<br></br>
+<!-- <samp> 标签来标记程序输出的内容 -->
+<samp>This text is meant to be treated as sample output from a computer program.</samp>
+
+	</br>
+	<!-- 基本实例 -->
+	<table class="table">
+	  <thead>
+	  	<th>1</th>
+	  	<th>2</th>
+	  	<th>3</th>
+	  	<th>4</th>
+	  </thead>
+	  <tbody>
+	  <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	 <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	   <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	  </tbody>
+	</table>
+
+	<br/>
+	<!-- 条纹状表格 -->
+	<table class="table table-striped">
+	  <thead>
+	  	<th>1</th>
+	  	<th>2</th>
+	  	<th>3</th>
+	  	<th>4</th>
+	  </thead>
+	  <tbody>
+	  <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	 <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	   <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	  </tbody>
+	</table>
+
+	<br/>
+	<!--带边框的表格-->
+	<table class="table table-bordered">
+	  <thead>
+	  	<th>1</th>
+	  	<th>2</th>
+	  	<th>3</th>
+	  	<th>4</th>
+	  </thead>
+	  <tbody>
+	  <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	 <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	   <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	  </tbody>
+	</table>
+
+	<br/>
+	<!-- 鼠标悬停-->
+	<table class="table table-hover">
+	  <thead>
+	  	<th>1</th>
+	  	<th>2</th>
+	  	<th>3</th>
+	  	<th>4</th>
+	  </thead>
+	  <tbody>
+	  <tr>
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	 <tr class="info">
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	   <tr class="danger">
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	  </tbody>
+	</table>
+
+	<br/>
+	<!-- 紧缩表格-->
+	<table class="table table-condensed">
+	  <thead>
+	  	<th>1</th>
+	  	<th>2</th>
+	  	<th>3</th>
+	  	<th>4</th>
+	  </thead>
+	  <tbody>
+	  <tr class="success">
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	 <tr class="active">
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	   <tr class="warning">
+	  	<th>1</th>
+	  	<td>2</td>
+	  	<td>3</td>
+	  	<td>4</td>
+	  </tr>
+	  </tbody>
+	</table>
+
+<br/>
+<!-- 响应式表格 -->
+	<div class="table-responsive">
+		<table class="table">
+		  <thead>
+		  	<th>1</th>
+		  	<th>2</th>
+		  	<th>3</th>
+		  	<th>4</th>
+		  </thead>
+		  <tbody>
+		  <tr class="active">
+		  	<th>1</th>
+		  	<td>2</td>
+		  	<td>3</td>
+		  	<td>4</td>
+		  </tr>
+		 <tr class="success">
+		  	<th>1</th>
+		  	<td>2</td>
+		  	<td>3</td>
+		  	<td>4</td>
+		  </tr>
+		   <tr>
+		  	<th>1</th>
+		  	<td>2</td>
+		  	<td>3</td>
+		  	<td>4</td>
+		  </tr>
+		  </tbody>
+		</table>
+	</div>
+
+<br/>
+<!-- 表单基本实例 -->
+	<form>
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputFile">File input</label>
+	    <input type="file" id="exampleInputFile">
+	    <p class="help-block">Example block-level help text here.</p>
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Check me out
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+<br/>
+<!-- 内联表单 -->
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-default">Send invitation</button>
+</form>
+
+<br/>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+	  </div>
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputPassword3">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+	  </div>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Remember me
+	    </label>
+	  </div>
+	  <button type="submit" class="btn btn-default">Sign in</button>
+	</form>
+
+<br/>
+<form class="form-inline">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Transfer cash</button>
+</form>
+
+<br/>
+<!-- 水平排列的表单 -->
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+	    <div class="col-sm-10">
+	      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+	    <div class="col-sm-10">
+	      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <div class="checkbox">
+	        <label>
+	          <input type="checkbox"> Remember me
+	        </label>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-default">Sign in</button>
+	    </div>
+	  </div>
+	</form>
+
+<br/>
+输入框
+<input type="text" class="form-control" placeholder="Text input">
+
+<br/>
+<!-- 文本框 -->
+<textarea class="form-control" rows="3"></textarea>
+
+<br/>
+<!-- 多选和单选框 -->
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="">
+	    Option one is this and that&mdash;be sure to include why it's great
+	  </label>
+	</div>
+	<div class="checkbox disabled">
+	  <label>
+	    <input type="checkbox" value="" disabled>
+	    Option two is disabled
+	  </label>
+	</div>
+
+	<div class="radio">
+	  <label>
+	    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	    Option one is this and that&mdash;be sure to include why it's great
+	  </label>
+	</div>
+	<div class="radio">
+	  <label>
+	    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	    Option two can be something else and selecting it will deselect option one
+	  </label>
+	</div>
+	<div class="radio disabled">
+	  <label>
+	    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+	    Option three is disabled
+	  </label>
+	</div>
+
+<br/>
+<!-- 内联单选和多选框 -->
+	<label class="checkbox-inline">
+	  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+	</label>
+	<label class="checkbox-inline">
+	  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+	</label>
+	<label class="checkbox-inline">
+	  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+	</label>
+
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+	</label>
+
+<br/>
+<!-- 下拉列表（select） -->
+	<select class="form-control">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	</select>
+
+<br></br>
+<br></br>
+<br></br>
+<!-- 默认显示多选项 -->
+	<select multiple class="form-control">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	</select>
+
+<br/>
+<!-- 将一行纯文本和 label 元素放置于同一行 静态控件 -->
+	<form class="form-horizontal">
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label">Email</label>
+	    <div class="col-sm-10">
+	      <p class="form-control-static">email@example.com</p>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+	    <div class="col-sm-10">
+	      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+	    </div>
+	  </div>
+	</form>
+
+<br/>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only">Email</label>
+	    <p class="form-control-static">email@example.com</p>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword2" class="sr-only">Password</label>
+	    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+	  </div>
+	  <button type="submit" class="btn btn-default">Confirm identity</button>
+	</form>
+
+<br/>
+<!-- 禁用状态 -->
+<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+
+<br/>
+<!-- Disabled input -->
+	<form>
+	  <fieldset disabled>
+	    <div class="form-group">
+	      <label for="disabledTextInput">Disabled input</label>
+	      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+	    </div>
+	    <div class="form-group">
+	      <label for="disabledSelect">Disabled select menu</label>
+	      <select id="disabledSelect" class="form-control">
+	        <option>Disabled select</option>
+	      </select>
+	    </div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox"> Can't check this
+	      </label>
+	    </div>
+	    <button type="submit" class="btn btn-primary">Submit</button>
+	  </fieldset>
+	</form>
+
+<br/>
+<!-- 只读状态 -->
+	<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+<br/>
+<!-- 校验状态 -->
+	<div class="form-group has-success">
+	  <label class="control-label" for="inputSuccess1">Input with success</label>
+	  <input type="text" class="form-control" id="inputSuccess1">
+	</div>
+	<div class="form-group has-warning">
+	  <label class="control-label" for="inputWarning1">Input with warning</label>
+	  <input type="text" class="form-control" id="inputWarning1">
+	</div>
+	<div class="form-group has-error">
+	  <label class="control-label" for="inputError1">Input with error</label>
+	  <input type="text" class="form-control" id="inputError1">
+	</div>
+	<div class="has-success">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxSuccess" value="option1">
+	      Checkbox with success
+	    </label>
+	  </div>
+	</div>
+	<div class="has-warning">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxWarning" value="option1">
+	      Checkbox with warning
+	    </label>
+	  </div>
+	</div>
+	<div class="has-error">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxError" value="option1">
+	      Checkbox with error
+	    </label>
+	  </div>
+	</div>
+
+<br/>
+<!-- 添加额外的图标 -->
+	<div class="form-group has-success has-feedback">
+	  <label class="control-label" for="inputSuccess2">Input with success</label>
+	  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+	  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+	</div>
+	<div class="form-group has-warning has-feedback">
+	  <label class="control-label" for="inputWarning2">Input with warning</label>
+	  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+	  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+	</div>
+	<div class="form-group has-error has-feedback">
+	  <label class="control-label" for="inputError2">Input with error</label>
+	  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+	  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputError2Status" class="sr-only">(error)</span>
+	</div>
+	<div class="form-group has-success has-feedback">
+	  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+	  <div class="input-group">
+	    <span class="input-group-addon">@</span>
+	    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+	  </div>
+	  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+	</div>
+
+<br/>
+<!-- 为水平排列的表单和内联表单设置可选的图标 -->
+	<form class="form-horizontal">
+	  <div class="form-group has-success has-feedback">
+	    <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+	    <div class="col-sm-9">
+	      <input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+	      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	      <span id="inputSuccess3Status" class="sr-only">(success)</span>
+	    </div>
+	  </div>
+	  <div class="form-group has-success has-feedback">
+	    <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+	    <div class="col-sm-9">
+	      <div class="input-group">
+	        <span class="input-group-addon">@</span>
+	        <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
+	      </div>
+	      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	      <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+	    </div>
+	  </div>
+	</form>
+
+<br/>
+	<form class="form-inline">
+	  <div class="form-group has-success has-feedback">
+	    <label class="control-label" for="inputSuccess4">Input with success</label>
+	    <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status">
+	    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	    <span id="inputSuccess4Status" class="sr-only">(success)</span>
+	  </div>
+	</form>
+	<form class="form-inline">
+	  <div class="form-group has-success has-feedback">
+	    <label class="control-label" for="inputGroupSuccess3">Input group with success</label>
+	    <div class="input-group">
+	      <span class="input-group-addon">@</span>
+	      <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
+	    </div>
+	    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	    <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+	  </div>
+	</form>
+
+<br/>
+	<div class="form-group has-success has-feedback">
+	  <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+	  <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
+	  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputSuccess5Status" class="sr-only">(success)</span>
+	</div>
+	<div class="form-group has-success has-feedback">
+	  <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+	  <div class="input-group">
+	    <span class="input-group-addon">@</span>
+	    <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
+	  </div>
+	  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+	  <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
+	</div>
+
+<br/>
+<!-- 高度尺寸 -->
+	<input class="form-control input-lg" type="text" placeholder=".input-lg">
+	<input class="form-control" type="text" placeholder="Default input">
+	<input class="form-control input-sm" type="text" placeholder=".input-sm">
+
+	<select class="form-control input-lg">
+		  <option>1</option>
+	</select>
+<br/>
+<br/>
+<br/>
+	<select class="form-control">
+		  <option>1</option>
+	</select>
+<br/>
+<br/>
+<br/>
+	<select class="form-control input-sm">
+		  <option>1</option>
+	</select>
+
+<br/>
+<!-- 水平排列的表单组的尺寸 -->
+	<form class="form-horizontal">
+	  <div class="form-group form-group-lg">
+	    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+	    <div class="col-sm-10">
+	      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+	    </div>
+	  </div>
+	  <div class="form-group form-group-sm">
+	    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+	    <div class="col-sm-10">
+	      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+	    </div>
+	  </div>
+	</form>
+
+<br/>
+<!-- 调整列（column）尺寸 -->
+	<div class="row">
+	  <div class="col-xs-2">
+	    <input type="text" class="form-control" placeholder=".col-xs-2">
+	  </div>
+	  <div class="col-xs-3">
+	    <input type="text" class="form-control" placeholder=".col-xs-3">
+	  </div>
+	  <div class="col-xs-4">
+	    <input type="text" class="form-control" placeholder=".col-xs-4">
+	  </div>
+	</div>
+
+<br/>
+<!-- 可作为按钮使用的标签或元素 -->
+	<a class="btn btn-default" href="#" role="button">Link</a>
+	<button class="btn btn-default" type="submit">Button</button>
+	<input class="btn btn-default" type="button" value="Input">
+	<input class="btn btn-default" type="submit" value="Submit">
+
+<br/>
+<br/>
+
+	<!-- Standard button -->
+	<button type="button" class="btn btn-default">（默认样式）Default</button>
+
+	<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+	<button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+	<!-- Indicates a successful or positive action -->
+	<button type="button" class="btn btn-success">（成功）Success</button>
+
+	<!-- Contextual button for informational alert messages -->
+	<button type="button" class="btn btn-info">（一般信息）Info</button>
+
+	<!-- Indicates caution should be taken with this action -->
+	<button type="button" class="btn btn-warning">（警告）Warning</button>
+
+	<!-- Indicates a dangerous or potentially negative action -->
+	<button type="button" class="btn btn-danger">（危险）Danger</button>
+
+	<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+	<button type="button" class="btn btn-link">（链接）Link</button>
+
+<br/>
+<!-- 尺寸 -->
+	<p>
+	  <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+	  <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+	  <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+	  <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+	</p>
+	<p>
+	  <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+	  <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+	</p>
+
+<br/>
+<!-- .btn-block 类可以将其拉伸至父元素100%的宽度，而且按钮也变为了块级（block）元素。 -->
+	<button type="button" class="btn btn-primary btn-lg btn-block">（块级元素）Block level button</button>
+	<button type="button" class="btn btn-default btn-lg btn-block">（块级元素）Block level button</button>
+
+<br/>
+<!-- 激活状态 button 元素 -->
+	<button type="button" class="btn btn-primary btn-lg active">Primary button</button>
+	<button type="button" class="btn btn-default btn-lg active">Button</button>
+
+<br/>
+<!-- 链接（<a>）元素 -->
+	<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+	<a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+
+<br/>
+<!-- 禁用状态Button -->
+	<button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary button</button>
+	<button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+	<a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
+	<a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>
+
+<br/>
+<br/>
+<!-- 情境背景色 -->
+	<p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	<p class="bg-success">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	<p class="bg-info">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	<p class="bg-warning">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	<p class="bg-danger">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<br/>
+<!-- 关闭按钮 -->
+	<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+<br/>
+<!-- 三角号 -->
+	<span class="caret"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS组件架构的设计思想</title>
+	<!--支持移动平台，移动先行，UI布局的宽度和移动设备的宽度一直，缩放大小为原始大小 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<style type="text/css">
+	.alert{
+		padding: 15px;
+		margin-bottom: 20px;
+		border:1px solid #000;
+		border-radius: 4px;
+	}
+	/*btn*/
+	.btn-primary{color: #fff;background-color: #428bca;border-color:#357ebs;}
+	/*panel*/
+	.panel-success{border-color: #d6e9c6;}
+	.panel-success > .panel-heading{color: #468847;background-color: #dff0d8;border-color: #d6e9c6;}
+	/*alert*/
+	.alert-success{color: #468847; background-color:#dff0f8;border-color: #d6e9c6; }
+	.alert-success hr {border-top-color:#c932b3; }
+	.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{color: #fff;background-color: #3276b1;border-color: #285e8e;outline: none;}
+	.btn-success:focus{outline: none;}
+	/*尺寸样式*/
+	.btn-lg{padding: 10px 16px;font-size: 18px;line-height: 1.33;border-radius: 6px;outline: none;}
+	.well-lg{padding: 24px;border-radius: 6px;}
+	.well-sm{padding: 9px;border-radius: 3px;}
+
+	/*状态样式*/
+	.btn:active,.btn:active{background-image: none;outline: 0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);}
+	.btn.disabled,.btn[disabled],fieldset[disabled] .btn{pointer-event:none;cursor:not-allowed;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;opacity: .65;}
+
+	</style>
+</head>
+<body>
+	<div class="alert"></div>
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<p></p>
+
+	<div class="alert alert-warning">Warning</div>
+	<br>
+
+	<div class="alert alert-danger">Danger</div>
+	<br>
+
+	<panel class="panel-success">Panel-success
+		<panel class="panel-heading">heading</panel>
+	</panel>
+	<p></p>
+	</br>
+	<!-- 尺寸样式 -->
+	<button type="button" class="btn btn-xs"> Primary</button>
+	<button type="button" class="btn btn-lg btn-success">Success</button>
+	<div class="well well-lg">well-lg</div>
+	<div class="well wekk-sm">well-sm</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

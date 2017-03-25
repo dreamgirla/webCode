@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>提示框</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<style type="text/css">
+	body{
+		margin: 100px;
+	}
+	</style>
+</head>
+<body>
+	<button class="tooltip-test btn btn-default" data-toggle="tooltip" data-placement="left" title="左侧的 Tooltip">左侧Tooltip</button>
+	<button class="tooltip-test btn btn-default" data-toggle="tooltip" data-placement="top" title="上方的 Tooltip">上方Tooltip</button>
+	<button class="tooltip-test btn btn-default" data-toggle="tooltip" data-placement="bottom" title="下方的 Tooltip">下方Tooltip</button>
+	<button class="tooltip-test btn btn-default" data-toggle="tooltip" data-placement="right" title="右侧的 Tooltip">右侧Tooltip</button>
+<br/>
+<br/>
+<p><strong>a标签toolpit提示</strong></p>
+		<a>
+		这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip" 
+		   title="默认的 Tooltip">
+		   默认的 Tooltip
+		</a>.
+		这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip" 
+		   data-placement="left" title="左侧的 Tooltip">
+		   左侧的 Tooltip
+		</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="top" 
+		   title="顶部的 Tooltip">
+		   顶部的 Tooltip
+		</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom" 
+		   title="底部的 Tooltip">
+		   底部的 Tooltip
+		</a>.
+		这是一个 <a href="#" data-toggle="tooltip" data-placement="right" 
+		   title="右侧的 Tooltip">
+		   右侧的 Tooltip
+		</a>
+<br/>
+<br/>
+<br/>
+<p><strong>Popover提示</strong></p>
+	<button type="button" class="btn btn-default tooltip-test" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	  Popover on 左侧
+	</button>
+
+	<button type="button" class="btn btn-default tooltip-test" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	  Popover on 顶部
+	</button>
+
+	<button type="button" class="btn btn-default tooltip-test" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+	sagittis lacus vel augue laoreet rutrum faucibus.">
+	  Popover on 底部
+	</button>
+
+	<button type="button" class="btn btn-default tooltip-test" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+	  Popover on 右侧
+	</button>
+
+
+<br/>
+<br/>
+<br/>
+<p><strong>弹出/隐藏弹出框</strong></p>	
+	 <button type="button" class="btn btn-lg btn-danger tooltip-test" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">点我弹出/隐藏弹出框</button>
+
+<br/>
+<br/>
+<br/>
+<p><strong>点击可消失的弹出框</strong></p>
+	<a tabindex="0" class="btn btn-lg btn-danger tooltip-test" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">可消失的弹出框</a>
+
+	<br/>
+	<br/>
+	<br/>
+<p><strong>单击反转弹出框</strong></p>	
+	<a data-toggle="popover"
+ 		data-original-title="A Title" title=""
+ 		data-content="And here's some amazing content.It's very engaging.right>"
+ 		class="btn btn-lg btn-danger" href="#">
+ 		单击反转弹出框
+ 	</a>
+
+<br/>
+<br/>
+<br/>
+<p><strong>弹出大弹窗和小弹窗</strong></p>
+		<!-- Large modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+		     <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		     </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Small modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	     <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	     </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+<br/>
+<br/>
+	<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="container-fluid">
+	          <div class="row">
+	            <div class="col-md-4">.col-md-4</div>
+	            <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+	          </div>
+	          <div class="row">
+	            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+	            <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+	          </div>
+	          <div class="row">
+	            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+	          </div>
+	          <div class="row">
+	            <div class="col-sm-9">
+	              Level 1: .col-sm-9
+	              <div class="row">
+	                <div class="col-xs-8 col-sm-6">
+	                  Level 2: .col-xs-8 .col-sm-6
+	                </div>
+	                <div class="col-xs-4 col-sm-6">
+	                  Level 2: .col-xs-4 .col-sm-6
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<br/>
+<br/>
+<p><strong>点击显示和隐藏</strong></p>
+	<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	  		Link with href
+		</a>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+		  Button with data-target
+		</button>
+		<div class="collapse" id="collapseExample">
+		  <div class="well">
+		    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+		  </div>
+		</div>
+
+	<script>
+	   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+	   $('[data-toggle=popover').popover();
+	</script>
+</body>
+</html>
