@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script> 
+<title>输入数据绑定</title>
+</head>
+<body>
+	<!-- 
+		ng-app 指令定义一个 AngularJS 应用程序。
+		ng-model 指令把元素值（比如输入域的值）绑定到应用程序。
+		AngularJS 表达式写在双大括号内：{{ expression }}。
+		AngularJS 将在表达式书写的位置"输出"数据。
+		ng-app指令定义了应用, ng-controller 定义了控制器。
+		Scope 是一个对象，有可用的方法和属性。
+		Scope 可应用在视图和控制器上。
+	 -->
+	<!-- ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。 -->
+	<div ng-app="myApp" ng-controller="myCtrl">
+	名字: <input ng-model="name">
+	<h1>你输入了: {{name}}</h1>
+	</div>
+
+	<script>
+	// 	在模块定义中 []参数用于定义模块的依赖关系。
+	// 中括号[]表示该模块没有依赖，如果有依赖的话会在中括号写上依赖的模块名字
+		var app = angular.module('myApp', []);
+		//这个函数就是控制器，里面是逻辑
+		app.controller('myCtrl', function($scope) {
+				//单项数据绑定,model中数据改，view数据也改
+				//model 就是数据
+		    $scope.name = "John Doe";
+		});																	
+	</script>
+
+	<p>修改输入框的值，标题的名字也会相应修改。</p>
+
+</body>
+</html>

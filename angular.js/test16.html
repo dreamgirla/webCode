@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular ngAnimate</title>
+	<style>
+	div {
+	  transition: all linear 0.5s;
+	  background-color: lightblue;
+	  height: 100px;
+	}
+
+	.ng-hide {
+	  height: 0;
+	}
+	</style>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-animate.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<h2>隐藏DIV：<input type="checkbox" ng-model="myCheck"></h2>
+	
+	<!-- 在 DIV 元素设置了 .ng-hide 类时，过渡需要花费 0.5 秒，高度从 100px 变为 0: -->
+	<div ng-hide="myCheck"></div>
+
+	<script type="text/javascript">
+		var app = angular.module('myApp',['ngAnimate']);
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML DOM</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+
+	<div ng-app="" ng-init="mySwitch=true">
+		<!-- ng-disabled 指令绑定应用程序数据 "mySwitch" 到 HTML 的 disabled 属性。
+		ng-model 指令绑定 "mySwitch" 到 HTML input checkbox 元素的内容（value）。 -->
+		<p>
+		<button ng-disabled="mySwitch">点我!</button>
+		</p>
+
+		<p>
+		<input type="checkbox" ng-model="mySwitch">按钮
+		</p>
+
+		<p>
+		{{ mySwitch }}
+		</p>
+		
+		<br>
+		<!-- 规定元素是否被选中 -->
+		<p>My cars:</p>
+	    <input type="checkbox" ng-model="all"> Check all<br><br>
+	    <input type="checkbox" ng-checked="all">Volvo<br>
+	    <input type="checkbox" ng-checked="all">Ford<br>
+	    <input type="checkbox" ng-checked="all">Mercedes
+	    <p>点击 "Check all" 选择所有的车。</p>
+	</div>
+</body>
+</html>

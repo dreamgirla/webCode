@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>输出多个</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<ul>
+<!-- 每个 <li> 元素可以访问当前的重复对象，这里对应的是一个字符串， 并使用变量 x 表示。 -->
+    <li ng-repeat="x in names">{{x}}</li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+});
+</script>
+</body>
+</html>

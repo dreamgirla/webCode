@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>不是angular数据绑定</title>
+</head>
+<body>
+	<!-- 文本替换 -->
+		<input type="text" id="username"/>
+
+		<div id="div1">
+			{{name}}
+		</div>
+
+	<script type="text/javascript">
+		var name = 'list';
+
+		var oDiv1 = document.getElementById('div1');
+		var oUsername = document.getElementById('username');
+
+		var text = oDiv1.innerText;
+
+		oUsername.onkeyup = function(){
+ 
+		var re = /{{\w+}}/ig;
+
+		oDiv1.innerHTML = text.replace(re,this.value);
+		};
+	</script>
+</body>
+</html>

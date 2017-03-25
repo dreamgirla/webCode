@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular API</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<!-- 
+		angular.lowercase()	转换字符串为小写
+		angular.uppercase()	转换字符串为大写
+		angular.isString()	判断给定的对象是否为字符串，如果是返回 true。
+		angular.isNumber()	判断给定的对象是否为数字，如果是返回 true。
+	 -->
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<p>{{ x1 }}</p>
+		<p>{{ x2 }}</p>
+	</div>
+
+		<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+		    $scope.x1 = "JoHn";
+		    //$scope.x2 = angular.lowercase($scope.x1);
+		    //$scope.x2 = angular.uppercase($scope.x1);
+		    //$scope.x2 = angular.isString($scope.x1);
+		    $scope.x2 = angular.isNumber($scope.x1);
+		});
+		</script>
+</body>
+</html>

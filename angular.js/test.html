@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		{{name}},haha
+	</div>
+
+	<script type="text/javascript">
+		var name = 'list';
+
+		var oDiv1 = document.getElementById('div1');
+		//innerHTML获取的是包括标签的html，innerTect获取的是标签内的html 
+		var text = oDiv1.innerText;
+
+		//\w代表0-9,a-z,A-Z,_, +一个或多个
+		var re = /{{\w+}}/ig;
+
+		oDiv1.innerHTML = text.replace(re,name);
+	</script>
+</body>
+</html>

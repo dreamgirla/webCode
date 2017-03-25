@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+</head>
+<body>
+	<!-- ng-options 的选项的一个对象， ng-repeat 是一个字符串 -->
+	<div ng-app="myApp" ng-controller="myCtrl">
+
+	<p>选择网站:</p>
+	<!-- 使用 ng-option 指令来创建一个下拉列表，列表项通过对象和数组循环输出
+	<select ng-model="selectedName" ng-options="x for x in names"></select> -->
+
+	<!-- 使用ng-repeat 指令来创建下拉列表
+	<select><option ng-repeat="x in names">{{x}}</option></select>		 -->
+	
+	<!-- ng-repeat 有局限性，选择的值是一个字符串:
+	<select ng-model="selectedSite">
+		<option ng-repeat="x in sites" value="{{x.url}}">{{x.site}}</option>
+	</select>
+	
+	<h1>你选择的是: {{selectedSite}}</h1> -->
+
+	<!-- 选择的值在 key-value 对的 value 中, 这是它是一个对象
+	<select ng-model="selectedCar" ng-options="x for (x, y) in cars"></select> -->
+	
+	<!-- 在下拉菜单也可以不使用 key-value 对中的 key , 直接使用对象的属性
+	<select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars"></select> -->
+	
+	<!-- 使用 ng-options 指令，选择的值是一个对象 -->
+	<select ng-model="selectedSite" ng-options="x.site for x in sites">
+	</select>
+
+	<h1>你选择的是: {{selectedSite.site}}</h1>
+	<p>网址为: {{selectedSite.url}}</p>
+
+	</div>
+
+	<script>
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope) {
+	   $scope.sites = [
+		    {site : "Google", url : "http://www.google.com"},
+		    {site : "Runoob", url : "http://www.runoob.com"},
+		    {site : "Taobao", url : "http://www.taobao.com"}
+		];
+	});
+	</script>
+
+	<p>该实例演示了使用 ng-options  指令来创建下拉列表，选中的值是一个对象。</p>
+</body>
+</html>

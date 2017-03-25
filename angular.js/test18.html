@@ -1,0 +1,44 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title>AngularJS 路由实例 - 菜鸟教程</title>
+    </head>
+    <body ng-app='routingDemoApp'>
+     
+        <h2>AngularJS 路由应用</h2>
+        <ul>
+            <li><a href="#/">首页</a></li>
+            <li><a href="#/computers">电脑</a></li>
+            <li><a href="#/printers">打印机</a></li>
+            <li><a href="#/blabla">其他</a></li>
+        </ul>
+         
+         <!-- 使用 ngView 指令,该 div 内的 HTML 内容会根据路由的变化而变化 -->
+        <div ng-view></div>
+        
+
+        <!-- templateUrl,如果我们只需要在 ng-view 中插入 HTML 模板文件，
+        会从服务端获取 views/computers.html 文件内容插入到 ng-view 中 -->
+        <!-- $routeProvider.when('/computers', {
+            templateUrl: 'views/computers.html',
+        }); -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script>
+        //包含了 ngRoute 模块作为主应用模块的依赖模块
+            angular.module('routingDemoApp',['ngRoute'])
+            .config(['$routeProvider', function($routeProvider){
+            //配置 $routeProvider,用来定义路由规则
+                $routeProvider
+                // template,如果我们只需要在 ng-view 中插入简单的 HTML 内容，则使用该参数
+                .when('/',{template:'这是首页页面'})
+                .when('/computers',{template:'这是电脑分类页面'})
+                .when('/printers',{template:'这是打印机页面'})
+                //redirectTo:重定向的地址
+                .otherwise({redirectTo:'/'});
+            }]);
+        </script>
+     
+     
+    </body>
+</html>

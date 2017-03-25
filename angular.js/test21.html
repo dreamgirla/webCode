@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>angular ng-class,ng-style</title>
+<script src="js/angular.min.js"></script>
+	<style>
+	.sky {
+	    color:white;
+	    background-color:lightblue;
+	    padding:20px;
+	    font-family:"Courier New";
+	}
+	.tomato {
+	    background-color:coral;
+	    padding:40px;
+	    font-family:Verdana;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<p>选择一个类:</p>
+
+	<select ng-model="home">
+	<option value="sky">天空色</option>
+	<option value="tomato">番茄色</option>
+	</select>
+
+	<div ng-class="home">
+	  <h1>Welcome Home!</h1>
+	  <p>I like it!</p>
+	</div>
+	
+	<h1 ng-style="myObj">菜鸟教程</h1>
+
+	<script>
+	var app = angular.module("myApp", []);
+	app.controller("myCtrl", function($scope) {
+	  $scope.myObj = {
+	    "color" : "white",
+	    "background-color" : "coral",
+	    "font-size" : "60px",
+	    "padding" : "50px"
+	  }
+	});
+</script>
+</body>
+</html>

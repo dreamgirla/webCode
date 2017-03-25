@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击事件</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<button ng-click="count = count + 1">点我加一</button>
+		<p>{{count}}</p>
+
+		<br>
+		<input ng-blur="count1 = count1 + 1" ng-init="count1=0" />
+
+		<h1>{{count1}}</h1>
+
+		<p>实例中 "count1" 变量记录了失去焦点的次数。</p>
+	</div>
+	
+	<script type="text/javascript">
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl', function($scope) {
+		    $scope.count = 0;
+		});
+	</script>
+</body>
+</html>

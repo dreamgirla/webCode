@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>服务器</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<!-- 
+		$http 是 AngularJS 应用中最常用的服务。服务向服务器发送请求，应用响应服务器传送过来的数据。
+		 AngularJS 使用 $location 服务比使用 window.location 对象更好
+ 	-->
+
+	<div ng-app="myApp" ng-controller="myCtrl"> 
+
+	<p>两秒后显示信息:</p>
+
+	<h1>{{myHeader}}</h1>
+
+	<!-- <p> 当前页面的url:</p>
+	<h3>{{myUrl}}</h3>
+	<p>该实例使用了内建的 $location 服务获取当前页面的 URL。</p> -->
+
+	</div>
+
+	<p>$timeout 访问在规定的毫秒数后执行指定函数。</p>
+
+	<script>
+	var app = angular.module('myApp', []);
+	// AngularJS $timeout 服务对应了 JS window.setTimeout 函数。
+	app.controller('myCtrl', function($scope, $timeout) {
+	  $scope.myHeader = "Hello World!";
+	  $timeout(function () {
+	      $scope.myHeader = "How are you today?";
+	  }, 2000);
+	});
+
+	// $location 服务，它可以返回当前页面的 URL 地址。
+	
+	// app.controller('myCtrl', function($scope, $location) {
+ 	// $scope.myUrl = $location.absUrl();
+	// });
+	</script>
+</body>
+</html>
