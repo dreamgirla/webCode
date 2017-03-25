@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		#header {
+			width: 960px;
+			height: 200px;
+			background-color: blue;
+			margin: 0 auto;
+		}
+		#nav {
+			width: 960px;
+			height: 20px;
+			background-color: black;
+			position: relative;
+			top: 180px;
+		}
+		#b1 {
+			float: left;
+			width: 260px;
+			height: 500px;
+			background-color: blue;
+			margin: 0;
+		}
+		#b2 {
+			float: left;
+			width: 700px;
+			height: 500px;
+			background: linear-gradient(red 50%, blue 100%);
+			margin: 0;
+		}
+		#container {
+			width: 960px;
+			margin: 0 auto;
+			height: 100%;
+		}
+		span {
+			color: #F00;
+			font-size: 28px;
+			font-weight: bold;
+			font-family: "Microsoft YaHei";
+			text-align: center;
+			text-decoration: underline;
+			width: 960px;
+			margin: 0 auto;
+			display: block;
+			text-shadow: 0px 0px 10px #300;
+			word-wrap: break-word;
+			/* word-break: break-all; */
+		}
+		#test {
+			width: 200px;
+			height: 100px;
+			border: 0px solid black;
+			border-radius: 100px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			margin: 100px;
+			cursor: pointer;
+			/* box-shadow: 10px 0px 10px #000 inset,
+						10px 0px 10px #000 ; */
+
+		}
+		#button {
+			width: 180px;
+			height: 50px;
+			border: 1px solid #666;
+			border-radius: 3px;
+			margin: 20px auto;
+			background: linear-gradient(lightgray, gray);
+			cursor: pointer;
+			color: black;
+			text-align: center;
+			line-height: 50px;
+			letter-spacing: 2px;
+			text-shadow: 0px 1px 1px #fff;
+			font-family: "Microsoft YaHei";
+			font-size: 20px;
+			-webkit-transition: all 0.2s;
+			-o-transition: all 0.2s;
+			transition: all 0.2s;
+			-webkit-animation: movBtn 2s infinite linear;
+		}
+		#button:hover {
+			background: linear-gradient(blue, gray);
+		}
+		#button:active {
+			background: linear-gradient(black, gray);
+		}
+		#button:visited {
+			background: linear-gradient(red, gray);
+		}
+
+		@-webkit-keyframes movBtn {
+			0% {transform: rotateY(0);}
+			50% {transform: rotateY(360deg);}
+			100% {transform: rotateY(0);}
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="nav"></div>
+	</div>
+	<div id="container">
+		<div id="b1">
+		</div>
+		<div id="b2" style="opacity: 0.5">
+		</div>
+	</div>
+	<span>
+		adfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfasadfasdfasdfasdfasdfas
+	</span>
+	1<div id="test">1</div>
+	<div id="button">模拟按钮</div>
+</body>
+</html>

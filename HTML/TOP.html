@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TOP</title>
+<style type="text/css">
+body{
+	height:2000px;
+}
+#back{
+	width:34px;
+	height:30px;
+	background-color:#09F;
+	position:fixed;
+	right:0;
+	bottom:10px;
+	cursor:pointer;
+	border:1px solid #000;
+}
+	
+</style>
+</head>
+<body>
+<div id="back"></div>
+<script>
+	var oBack =document.getElementById("back");
+	oBack.onclick=function(){
+		var timer = setInterval(function(){
+			var iScrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+			iScrollTop -=100;
+			if(iScrollTop<=0){
+				clearInterval(timer);
+			}
+			console.log(iScrollTop);
+			window.scrollTo(0,0);
+			},50);
+		};
+		window.onscroll=function(){
+			var iScrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+			if(iScrollTop>300){
+				oBack.style.display="block";
+			}
+			else{
+				oBack.style.display ="none";
+			}
+					
+		}
+
+
+</script>
+
+</body>
+</html>

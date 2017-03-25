@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PAGE-PLAIN 4 CSS</title>
+
+	<!-- 外联引用CSS样式 -->
+	<link rel="stylesheet" type="text/css" href="">
+
+	<!-- 内联引用CSS样式 -->
+	<style>
+     #id2+#id3{
+     	color: green;
+     }
+	</style>
+</head>
+	<!-- 内部引入CSS样式 -->
+	<body style="margin: 50px;">
+		
+		<li class="blocks">li(1)</li>
+		<li class="blocks">li(2)</li>
+		<li class="blocks">li(3)</li>
+		<li class="blocks">li(4)</li>
+		<li class="blocks">li(5)</li>
+		<li class="blocks">li(6)</li>
+		<li class="blocks">li(7)</li>
+		<li class="blocks">li(8)</li>
+		<li class="blocks">li(9)</li>
+		<li class="blocks">li(10)</li>
+		<br/>
+
+		<input type="text" value="enabledText" enabled>
+		<input type="text" value="disabledText" disabled>
+		<br/><br/>
+
+		<input id="check1" type="checkbox">
+		<label for="check1">复选框1</label>&nbsp;&nbsp;
+		<input id="check2" type="checkbox"checked>
+		<label for="check2">复选框2</label>
+		<br/><br/>
+
+		<button>这是一个可点击的按钮</button>
+		<a href="#" id="layers">这是一个链接</a>
+		<br/><br/>
+
+		<div id="layers">
+			INSIDE LAYERS
+			<div id="id1">
+				div id1
+				<div id="id1_1">div id1_1</div>
+			</div>
+			<div id="id2">
+				div id2
+				<div id="id2_1">
+					div id2_1
+					<div id="id2_1_1">div id2_1_1</div>
+				</div>
+			</div>
+			<div id="id3">div id3</div>
+		</div>
+		<div>
+			OUTSIDE LAYERS
+		</div>
+		
+
+	</body>
+</html>
